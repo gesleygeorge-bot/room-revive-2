@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply bg-sand-50 text-sand-900 font-sans antialiased;
+  }
+
+  ::selection {
+    @apply bg-clay-200 text-sand-900;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-sand-900 px-6 py-3 text-sm font-semibold text-sand-50 transition-all duration-200 hover:bg-sand-800 hover:shadow-lift focus:outline-none focus-visible:ring-2 focus-visible:ring-sand-900 focus-visible:ring-offset-2 focus-visible:ring-offset-sand-50 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-sand-300 bg-sand-50 px-6 py-3 text-sm font-semibold text-sand-800 transition-all duration-200 hover:border-sand-400 hover:bg-sand-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-sand-400 focus-visible:ring-offset-2 focus-visible:ring-offset-sand-50 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-4 py-2 text-sm font-medium text-sand-600 transition-colors duration-200 hover:bg-sand-100 hover:text-sand-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-sand-400;
+  }
+
+  .card {
+    @apply rounded-2xl border border-sand-200 bg-white shadow-soft;
+  }
+
+  .input-field {
+    @apply w-full rounded-xl border border-sand-300 bg-white px-4 py-3 text-sm text-sand-900 placeholder-sand-400 transition-colors duration-200 focus:border-sand-900 focus:outline-none focus:ring-1 focus:ring-sand-900;
+  }
+
+  .shimmer-bg {
+    background: linear-gradient(
+      90deg,
+      rgba(214, 205, 191, 0.2) 0%,
+      rgba(214, 205, 191, 0.5) 50%,
+      rgba(214, 205, 191, 0.2) 100%
+    );
+    background-size: 200% 100%;
+  }
+}
